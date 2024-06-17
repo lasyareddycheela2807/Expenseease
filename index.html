@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Pie Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        .plus {
+            color: green;
+        }
+        .minus {
+            color: red;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Expense Ease</h1>
+    <div>
+       
+        <div class="inc-exp-container">
+            <div>
+                <h3 class="plus">Income: <span id="money-plus"></span></h3>
+            </div>
+            <div>
+                <h3 class="minus">Expense: <span id="money-minus"></span></h3>
+            </div>
+        </div>
+        <h3>Balance: <span id="balance"></span></h3>
+    </div>
+    <div>
+        <h3>Add New Transaction</h3>
+        <form id="form">
+            <div>
+                <label for="text">Text</label><br>
+                <input type="text" id="text" placeholder="Enter text...">
+            </div>
+            <div>
+                <label for="amount">Amount</label><br>
+                <input type="number" id="amount" placeholder="Enter amount...">
+            </div>
+            <div>
+                <label>Transaction Type</label><br>
+                <input type="radio" id="income" name="transaction-type" value="income" checked>
+                <label for="income">Income</label>
+                <input type="radio" id="expense" name="transaction-type" value="expense">
+                <label for="expense">Expense</label>
+            </div>
+            <button type="submit">Add Transaction</button>
+        </form>
+    </div>
+    <div>
+        <h3>Transaction History</h3>
+        <ul id="list" class="list"></ul>
+    </div>
+    <canvas id="myChart" width="20" height="20"></canvas>
+</body>
+</html>
